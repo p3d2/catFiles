@@ -6,35 +6,6 @@ This repository contains a ZIP archive (```catfiles.zip```) of sample files demo
 
 The ```catfiles.zip``` archive includes the following files:
 
-Tree:
-
-catfiles
-
-│   finalfinal_list_of_cats.txt
-
-├───julia
-
-│       febhealth.docx
-
-├───New folder
-
-│       meowdata2_final.xlsx
-
-├───photos2023
-
-│       IMG001.png
-
-├───Stuff
-
-│       Notes About New Cats.docx
-
-│       spreadsheetcopy5.xlsx
-
-└───temp
-
-        photos.zip
-        
-
 ```finalfinal_list_of_cats.txt```
 A simple text file listing cat names with placeholder entries.
 
