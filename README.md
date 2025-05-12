@@ -4,23 +4,36 @@ This repository contains a ZIP archive (```catfiles.zip```) of sample files demo
 
 ## Contents of the ZIP
 
-The catfiles.zip archive includes the following files:
+The ```catfiles.zip``` archive includes the following files:
 
 Tree:
 
 catfiles
+
 │   finalfinal_list_of_cats.txt
+
 ├───julia
+
 │       febhealth.docx
+
 ├───New folder
+
 │       meowdata2_final.xlsx
+
 ├───photos2023
+
 │       IMG001.png
+
 ├───Stuff
+
 │       Notes About New Cats.docx
+
 │       spreadsheetcopy5.xlsx
+
 └───temp
+
         photos.zip
+        
 
 ```finalfinal_list_of_cats.txt```
 A simple text file listing cat names with placeholder entries.
@@ -42,7 +55,7 @@ Contains individual photos of cats
 
 ## Exercise Instructions
 
-1) Download and unzip catfiles.zip into your working directory.
+1) Download and unzip ```catfiles.zip``` into your working directory.
 
 2) Review the existing folder (if included) and files to identify inconsistencies.
 
