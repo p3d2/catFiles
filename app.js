@@ -7,6 +7,7 @@ function fileType(filename) {
   if (filename.endsWith('.xlsx')) return 'xlsx';
   if (filename.endsWith('.png'))  return 'png';
   if (filename.endsWith('.zip'))  return 'zip';
+  if (filename.endsWith('.txt'))  return 'txt';
   return 'file';
 }
 
