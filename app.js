@@ -1,5 +1,20 @@
 // app.js
 
+// 0. Keep the original structure so “Reset” can restore it
+const ORIGINAL_JSON = JSON.parse(JSON.stringify(treeData));
+let undoStack = [];
+
+// Helper: take snapshot
+function snapshot() {
+  const tree  = $('#file-tree').jstree(true);
+  undoStack.push(tree.get_json('#', { flat:false }));
+  $('#btn-undo').prop('disabled', undoStack.length === 0);
+}
+$('#file-tree').on(
+  'create_node.jstree rename_node.jstree move_node.jstree delete_node.jstree',
+  () => snapshot()
+);
+
 // 1. Helper to pick types/icons by extension
 function fileType(filename) {
   filename = filename.toLowerCase();
@@ -91,4 +106,21 @@ $('#file-tree').on("select_node.jstree", (e, data) => {
 $('#file-tree').on('select_node.jstree deselect_all.jstree', () => {
   const sel = $('#file-tree').jstree('get_selected', true);
   $('#btn-rename, #btn-delete').prop('disabled', sel.length !== 1);
+});
+
+// Undo = pop last snapshot and reload it
+$('#btn-undo').on('click', () => {
+  if (!undoStack.length) return;
+  const last = undoStack.pop();
+  $('#btn-undo').prop('disabled', undoStack.length === 0);
+  $('#file-tree').jstree(true).settings.core.data = last;
+  $('#file-tree').jstree(true).refresh(false, true);   // keep open state
+});
+
+// Reset = wipe history, restore ORIGINAL_JSON
+$('#btn-reset').on('click', () => {
+  undoStack.length = 0;
+  $('#btn-undo').prop('disabled', true);
+  $('#file-tree').jstree(true).settings.core.data = JSON.parse(JSON.stringify(ORIGINAL_JSON));
+  $('#file-tree').jstree(true).refresh(false, true);
 });
