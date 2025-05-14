@@ -4,17 +4,32 @@
   <meta charset="UTF-8">
   <title>Cat Files Sandbox</title>
   <!-- jsTree styles -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css"
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
   />
   <style>
-    body { font-family: sans-serif; margin: 1rem; }
-    #file-tree { max-width: 600px; }
+    /* Make the tree wider (or narrower) */
+    #file-tree {
+      max-width: 800px;    /* e.g. expand to 800px */
+      margin: 1rem auto;   /* center on the page */
+    }
+  
+    /* Increase spacing between rows */
+    .jstree-default .jstree-node {
+      padding: 0.25rem 0.5rem;   /* vertical | horizontal padding */
+    }
+  
+    /* Change the font size for readability */
+    .jstree-default .jstree-anchor {
+      font-size: 1.1rem;         /* 110% of normal text */
+      line-height: 1.4;          /* more breathing room */
+    }
   </style>
+
 </head>
 <body>
-  <h1>🏗️ Cat Files Sandbox</h1>
+  
+  <h1><i class="fa">&#xf1b0;</i> Cat folder</h1>
   <p>Drag to move, right-click to rename/add/delete.</p>
   <div id="file-tree"></div>
 
