@@ -39,7 +39,8 @@ $('#file-tree').jstree({
     docx:   { icon: "fas fa-file-word" },
     xlsx:   { icon: "fas fa-file-excel" },
     png:    { icon: "fas fa-file-image" },
-    zip:    { icon: "fas fa-file-archive" }
+    zip:    { icon: "fas fa-file-archive" },
+    txt:    { icon: "fas fa-file-alt" }
   },
   plugins: ["dnd", "contextmenu", "types"]
 })
