@@ -70,45 +70,33 @@
     }
 
     .jstree-default .jstree-anchor {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      padding: 0.4rem 0.6rem;
-      line-height: 1.6;
-      min-height: 2.2rem; /* ensure row height is consistent */
-      box-sizing: border-box;
-      border-radius: 4px;
+      font-size: 1.1rem;
+      padding: 0.3rem 0.8rem;
+      margin-left: 4px;
+      line-height: 1.8;
+      user-select: none;
+      cursor: pointer;
     }
 
     .jstree-default .jstree-node:hover > .jstree-anchor {
       background: #e9f5ff;
     }
 
-    /* Keep icon centered vertically and spaced */
+    /* Space between icon and text */
     .jstree-default .jstree-themeicon {
       margin-right: 8px;
       font-size: 1.2rem;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      height: 100%;
     }
 
     /* Expand/collapse buttons as emoji */
     .jstree-default .jstree-icon.jstree-ocl {
+      background: none;
       font-size: 1.3rem;
-      width: 1.5rem;
-      height: 100%;
+      width: 1.2em;
       text-align: center;
-      line-height: 1.5rem;
       cursor: pointer;
     }
 
-    .jstree-default .jstree-anchor.jstree-clicked {
-      background-color: #d0ebff;
-      border-radius: 4px;
-    }
-    
     .jstree-default .jstree-closed > .jstree-icon.jstree-ocl::before {
       content: '➕';
     }
