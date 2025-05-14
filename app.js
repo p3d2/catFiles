@@ -102,9 +102,18 @@ $('#file-tree').jstree({
 $('#btn-new').on('click', () => {
   const tree = $('#file-tree').jstree(true);
   const sel  = tree.get_selected(true)[0];
-  const parent = sel ? sel.id : '#';
-  const n = tree.create_node(parent, { text:'New folder', type:'folder' });
-  tree.edit(n);
+
+  // Determine parent: fallback to root if nothing selected
+  let parent = '#';
+
+  if (sel) {
+    const isFolder = sel.type === 'folder' || sel.type === 'zip';
+    parent = isFolder ? sel.id : sel.parent;
+  }
+
+  // Create new folder and start renaming
+  const newNode = tree.create_node(parent, { text: 'New folder', type: 'folder' });
+  if (newNode) tree.edit(newNode);
 });
 $('#btn-rename').on('click', () => {
   const tree = $('#file-tree').jstree(true);
