@@ -26,7 +26,7 @@ Contains individual photos of cats
 
 ## Exercise Instructions
 
-1) Download and unzip ```catfiles.zip``` into your working directory.
+1) Download and unzip ```catfiles.zip``` into your working directory. OR Access [🔗 Open the Cat Files Sandbox](https://p3d2.github.io/catFiles/)
 
 2) Review the existing folder (if included) and files to identify inconsistencies.
 
