@@ -70,10 +70,13 @@
     }
 
     .jstree-default .jstree-anchor {
-      display: inline-block;
+      display: flex;
+      align-items: center;
       width: 100%;
       padding: 0.4rem 0.6rem;
-      line-height: 1.8;
+      line-height: 1.6;
+      min-height: 2.2rem; /* ensure row height is consistent */
+      box-sizing: border-box;
       border-radius: 4px;
     }
 
@@ -81,21 +84,31 @@
       background: #e9f5ff;
     }
 
-    /* Space between icon and text */
+    /* Keep icon centered vertically and spaced */
     .jstree-default .jstree-themeicon {
       margin-right: 8px;
       font-size: 1.2rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      height: 100%;
     }
 
     /* Expand/collapse buttons as emoji */
     .jstree-default .jstree-icon.jstree-ocl {
-      background: none;
       font-size: 1.3rem;
-      width: 1.2em;
+      width: 1.5rem;
+      height: 100%;
       text-align: center;
+      line-height: 1.5rem;
       cursor: pointer;
     }
 
+    .jstree-default .jstree-anchor.jstree-clicked {
+      background-color: #d0ebff;
+      border-radius: 4px;
+    }
+    
     .jstree-default .jstree-closed > .jstree-icon.jstree-ocl::before {
       content: '➕';
     }
