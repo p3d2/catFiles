@@ -65,7 +65,7 @@ $('#btn-new').on('click', () => {
 $('#btn-rename').on('click', () => {
   const tree = $('#file-tree').jstree(true);
   const sel = tree.get_selected(true)[0];
-  if (sel) tree.edit(sel);
+  if (sel) tree.edit(sel);  // ✅ works on both files and folders
 });
 
 $('#btn-delete').on('click', () => {
@@ -77,3 +77,16 @@ $('#btn-delete').on('click', () => {
 // Optional: log changes for debugging
 $('#file-tree').on('create_node.jstree rename_node.jstree move_node.jstree delete_node.jstree',
   (e, data) => console.log("Changed:", e.type, data.node));
+
+// Toggle open/close when clicking on folder text
+$('#file-tree').on("select_node.jstree", (e, data) => {
+  const tree = $('#file-tree').jstree(true);
+  if (data.node.children.length > 0) {
+    tree.toggle_node(data.node);
+  }
+});
+
+$('#file-tree').on('select_node.jstree deselect_all.jstree', () => {
+  const sel = $('#file-tree').jstree('get_selected', true);
+  $('#btn-rename, #btn-delete').prop('disabled', sel.length !== 1);
+});
