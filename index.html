@@ -65,8 +65,10 @@
       padding: 0.4rem 0.6rem;
     }
     .jstree-default .jstree-anchor {
-      user-select: none;
-      cursor: pointer;
+      font-size: 2rem;
+      padding: 0.3rem 0.6rem;
+      margin-left: 4px;
+      line-height: 1.6;
     }
     .jstree-default .jstree-node:hover > .jstree-anchor {
       background: #e9f5ff;
@@ -76,6 +78,26 @@
       padding: 4 10px;
       cursor: pointer;
     }
+    .jstree-default .jstree-icon.jstree-ocl {
+      font-size: 1.4rem;
+      width: 1.2em;
+      cursor: pointer;
+    }
+    /* Space between icon and filename */
+    .jstree-default .jstree-themeicon {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+    /* Custom folder color */
+    .fas.fa-folder-open {
+      color: #f4b400;  /* Google yellow */
+    }
+    /* Custom icons with colors by file type */
+    .fas.fa-file-word { color: #2b579a; }     /* Word blue */
+    .fas.fa-file-excel { color: #217346; }    /* Excel green */
+    .fas.fa-file-image { color: #c2185b; }    /* Deep pink */
+    .fas.fa-file-archive { color: #f57c00; }  /* Orange for zip */
+    .fas.fa-file-alt { color: #607d8b; }      /* Grey for .txt */
   </style>
 </head>
 <body>
