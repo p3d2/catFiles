@@ -1,19 +1,15 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>🐾 Cat Sandbox Explorer</title>
+
   <!-- Font Awesome for toolbar icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
   <!-- jsTree styles -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+
   <style>
     /* Reset & base */
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,8 +17,11 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #f5f7fa;
       color: #333;
-      display: flex; flex-direction: column; height: 100vh;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
+
     /* Top toolbar */
     #toolbar {
       background: #fff;
@@ -31,9 +30,10 @@
       display: flex;
       gap: 0.5rem;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       z-index: 10;
     }
+
     #toolbar button {
       background: #007bff;
       color: #fff;
@@ -47,59 +47,74 @@
       gap: 0.4rem;
       transition: background 0.2s;
     }
+
     #toolbar button:hover {
       background: #0056b3;
     }
+
     #toolbar button:disabled {
       background: #aaa;
       cursor: not-allowed;
     }
-    /* Container for file tree */
+
+    /* Tree container */
     #container {
       padding: 1rem;
       overflow: auto;
       flex: 1;
     }
-    /* jsTree overrides for modern look */
+
+    /* jsTree layout and font */
     .jstree-default .jstree-node {
       padding: 0.4rem 0.6rem;
     }
+
     .jstree-default .jstree-anchor {
-      font-size: 2rem;
+      font-size: 1.1rem;
       padding: 0.3rem 0.6rem;
       margin-left: 4px;
       line-height: 1.6;
+      user-select: none;
+      cursor: pointer;
     }
+
     .jstree-default .jstree-node:hover > .jstree-anchor {
       background: #e9f5ff;
     }
-    .jstree-default .jstree-icon {
-      font-size: 2rem;
-      padding: 4 10px;
-      cursor: pointer;
-    }
-    .jstree-default .jstree-icon.jstree-ocl {
-      font-size: 1.4rem;
-      width: 1.2em;
-      cursor: pointer;
-    }
-    /* Space between icon and filename */
+
+    /* Space between icon and text */
     .jstree-default .jstree-themeicon {
       margin-right: 8px;
       font-size: 1.2rem;
     }
-    /* Custom folder color */
-    .fas.fa-folder-open {
-      color: #f4b400;  /* Google yellow */
+
+    /* Expand/collapse buttons as emoji */
+    .jstree-default .jstree-icon.jstree-ocl {
+      background: none;
+      font-size: 1.3rem;
+      width: 1.2em;
+      text-align: center;
+      cursor: pointer;
     }
-    /* Custom icons with colors by file type */
-    .fas.fa-file-word { color: #2b579a; }     /* Word blue */
-    .fas.fa-file-excel { color: #217346; }    /* Excel green */
-    .fas.fa-file-image { color: #c2185b; }    /* Deep pink */
-    .fas.fa-file-archive { color: #f57c00; }  /* Orange for zip */
-    .fas.fa-file-alt { color: #607d8b; }      /* Grey for .txt */
+
+    .jstree-default .jstree-closed > .jstree-icon.jstree-ocl::before {
+      content: '➕';
+    }
+
+    .jstree-default .jstree-open > .jstree-icon.jstree-ocl::before {
+      content: '➖';
+    }
+
+    /* Colored icons for file types */
+    .fas.fa-folder-open    { color: #f4b400; }
+    .fas.fa-file-word      { color: #2b579a; }
+    .fas.fa-file-excel     { color: #217346; }
+    .fas.fa-file-image     { color: #c2185b; }
+    .fas.fa-file-archive   { color: #f57c00; }
+    .fas.fa-file-alt       { color: #607d8b; }
   </style>
 </head>
+
 <body>
   <div id="toolbar">
     <button id="btn-new" disabled><i class="fas fa-folder-plus"></i> New Folder</button>
@@ -114,7 +129,8 @@
   <!-- Dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
-  <!-- Your application logic -->
+
+  <!-- App logic -->
   <script src="app.js"></script>
 </body>
 </html>
