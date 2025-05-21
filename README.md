@@ -1,3 +1,4 @@
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 # Cat Files Mockup
 
 This repository contains a ZIP archive () of sample files demonstrating a messy folder structure and file naming conventions. Use these mockups for hands-on exercises in organizing data with clear naming conventions and logical folder hierarchies. The purpose of this exercise is to make a folder structure and rename files so they follow a logical set of rules. The information about the files is limited so the person (group) doing the exercise can decide what the files are.
@@ -50,3 +51,17 @@ Contains individual photos of cats
   - Create a README.md (or update this one) with your naming and folder rules.
   - Optionally, prepare a slide or report showcasing your improvements.
 
+## License
+
+This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to share and adapt the materials, even for commercial purposes, as long as appropriate credit is given.
+
+© 2025 Pedro Silva
+
+## Citation
+
+If you use these materials in your teaching, research, or publications, please cite as:
+
+> Pedro Silva. (2025). https://github.com/p3d2/catFiles  
+> Licensed under CC BY 4.0.
