@@ -1,6 +1,16 @@
 # Cat Files Mockup
 
-This repository contains a ZIP archive (```catfiles.zip```) of sample files demonstrating a messy folder structure and file naming conventions. Use these mockups for hands-on exercises in organizing data with clear naming conventions and logical folder hierarchies.
+This repository contains a ZIP archive () of sample files demonstrating a messy folder structure and file naming conventions. Use these mockups for hands-on exercises in organizing data with clear naming conventions and logical folder hierarchies. The purpose of this exercise is to make a folder structure and rename files so they follow a logical set of rules. The information about the files is limited so the person (group) doing the exercise can decide what the files are.
+
+This repository includes a ZIP archive (```catfiles.zip```) containing sample files that illustrate a messy and inconsistent folder structure with poor naming conventions.
+
+Use this dataset for hands-on practice in:
+- Designing clear, logical folder hierarchies
+- Renaming files to follow consistent, meaningful conventions
+- Applying organizational strategies based on inferred file content
+
+🔍 **Note:** The files contain a minimal description, encouraging participants (individuals or groups) to make decisions about file categorization and naming based on context and reasoning.
+This exercise is ideal for workshops, teaching clean data practices, or testing organizational strategies.
 
 ## Contents of the ZIP
 
