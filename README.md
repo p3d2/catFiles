@@ -50,7 +50,3 @@ Contains individual photos of cats
   - Create a README.md (or update this one) with your naming and folder rules.
   - Optionally, prepare a slide or report showcasing your improvements.
 
-## License
-
-Use these mock files freely for educational and workshop purposes.
-
